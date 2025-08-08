@@ -1,97 +1,120 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🛠️ Home Services Booking App
 
-# Getting Started
+A fully functional mobile application built using **React Native** that allows users to book trusted home service professionals like electricians, plumbers, and painters. The app offers seamless booking, secure QR code payments, and real-time service status views for both clients and admins.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 📲 Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- 🔐 User login and authentication  
+- 📅 Service booking with selected date and time  
+- 🧑‍🔧 Worker selection based on type of service  
+- 💸 QR code-based payment confirmation flow  
+- 📩 SMS confirmation message after successful payment  
+- 🔒 Booking validation to prevent double-booking of workers  
+- 🖥️ Separate views for Client and Admin for booking overview  
+- 🧠 Smooth navigation and intuitive UI/UX  
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
+## 🧪 Tech Stack
+
+- **React Native** – Mobile app framework  
+- **JavaScript / TypeScript** – Application logic  
+- **React Navigation** – Screen routing  
+- **react-native-qrcode-svg** – QR code generation  
+- **AsyncStorage** – Local storage for user sessions and bookings  
+- *(Optional backend can be added using Firebase or Node.js)*
+
+---
+
+## 🗂️ Folder Structure
+
+HomeServicesApp/
+├── assets/
+│ └── icons/
+│ ├── carpenter.png
+│ ├── electrician.png
+│ └── ...
+├── src/
+│ ├── data/
+│ │ ├── services.js
+│ │ └── bookings.js
+│ └── screens/
+│ ├── LoginScreen.tsx
+│ ├── HomeScreen.tsx
+│ ├── BookingScreen.tsx
+│ ├── PaymentScreen.tsx
+│ ├── AdminViewScreen.tsx
+│ ├── ClientViewScreen.tsx
+│ └── WorkersScreen.tsx
+├── App.tsx
+├── package.json
+└── README.md
+
+yaml
+Copy
+Edit
+
+
+---
+
+## 🛠️ How to Run the Project
+
+> ⚠️ Make sure you’ve set up your development environment using the official [React Native guide](https://reactnative.dev/docs/environment-setup) for **React Native CLI**.
+
+### 📦 Install Dependencies
+
+```bash
+npm install
+
+▶️ Start Metro Bundler
+bash
+Copy
+Edit
 npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
+📱 Run on Android Device or Emulator
+bash
+Copy
+Edit
 npm run android
+Make sure an Android emulator is running or a real device is connected via USB with debugging enabled.
 
-# OR using Yarn
-yarn android
-```
+🧪 Testing the Flow
+Login using any sample credentials (no backend verification).
 
-### iOS
+Select a service (like electrician, plumber, etc.).
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+Pick a worker, choose date & time, and click "Book Now".
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Proceed to the Payment Screen.
 
-```sh
-bundle install
-```
+Scan the QR code and click "I have paid".
 
-Then, and every time you update your native dependencies, run:
+A popup confirms the payment, followed by an SMS (simulated).
 
-```sh
-bundle exec pod install
-```
+Admin view and Client view show bookings.
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+📦 Future Enhancements
+Razorpay or UPI integration for real payments
 
-```sh
-# Using npm
-npm run ios
+Backend using Firebase or Node.js with database
 
-# OR using Yarn
-yarn ios
-```
+Real-time SMS using Twilio
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+Notification support
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Booking history and feedback
 
-## Step 3: Modify your app
+🤝 Contributing
+Contributions are welcome!
+If you'd like to improve the app or add features, feel free to fork the repo and submit a pull request.
 
-Now that you have successfully run the app, let's make changes!
+📄 License
+This project is open-source and available under the MIT License.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+👨‍💻 Author
+S.B Narasimha Raju
+📍 Mysore, India
+🔗 LinkedIn : linkedin.com/in/narasimharaju1
+🐙 GitHub: github.com/Raju8431
